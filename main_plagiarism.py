@@ -3,6 +3,7 @@ Avoid plagiarism
 - detect two most likely books that might have plagiarism.
 """
 
+import sys
 import model.book as Book
 
 class Person:
@@ -24,6 +25,7 @@ class Company:
 
 person = Person(1, "Ricardo", "none", "Rios Rodriguez")
 
+print("====== Persons ======")
 print("ID: ", person.id)
 print("First_name: ", person.first_name)
 print("Second_name: ", person.second_name)
@@ -31,12 +33,19 @@ print("Last_name: ", person.last_name)
 
 company = Company(1, "Company SA de CV", "Financial", "FINSA9023941C0", "COMP12345")
 
+print("====== Companies ======")
 print("ID: ", company.id)
 print("Name: ", company.name)
 print("Role: ", company.role)
 print("RFC: ", company.rfc)
 print("Company_ID: ", company.company_id)
 
-#book = Book(1, "Stars", "content")
+book = Book.Book()
+book.id = 1
+book.title = "King Arthur"
+book.content = "This is a story of king arthur adventures"
 
-#print("Book: ", book.id)
+print("====== Books ======")
+print("ID: ", book.id)
+print("Title: ", book.title)
+print("Content:", book.content)

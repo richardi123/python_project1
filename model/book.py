@@ -1,13 +1,10 @@
 class Book:
+    
     def __init___(self, id, title, content):
         self.id = id
         self.title = title
         self.content = content
         self.last_page = 0
-
-    def __init__(self, id, title):
-        self.id = id
-        self.title = title
 
     def display_page(self):
         return self.content[self.last_page]
@@ -16,7 +13,7 @@ class Book:
         self.last_page += 1
         return self.display_page()
     
-class Library:
+"""class Library:
     def __init__(self):
         self.collection = dict()
         self.active_book = None
@@ -38,3 +35,4 @@ class Library:
 
     def turn_page(self):
         return self.collection[self.active_book].turn_page()
+"""
